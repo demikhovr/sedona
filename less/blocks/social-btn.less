@@ -1,0 +1,30 @@
+.social-btn {
+  position: relative;
+
+  display: flex;
+  width: 46px;
+  height: 48px;
+
+  background-color: @light-grey-blue;
+  outline: none;
+
+  transition: background-color 0.1s linear;
+  &:hover,
+  &:focus {
+    background-color: #669ec0;
+  }
+  &:active {
+    background-color: #5496bd;
+    & svg {
+      opacity: 0.3;
+    }
+  }
+}
+
+.social-btn svg {
+  margin: auto;
+
+  transition: opacity 0.1s linear;
+
+  fill: @white;
+}

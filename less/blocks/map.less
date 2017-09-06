@@ -1,0 +1,39 @@
+.map {
+  position: relative;
+
+  height: 350px;
+
+  background-color: #f4f3f0;
+}
+
+.map img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 10;
+
+  display: block;
+  width: 320px;
+  height: 350px;
+
+  transform: translateX(-50%);
+}
+
+.map iframe {
+  position: relative;
+  z-index: 20;
+
+  display: block;
+}
+
+@media @tablet-widths {
+  .map img {
+    width: 768px;
+  }
+}
+
+@media @desktop-widths {
+  .map img {
+    width: 1200px;
+  }
+}

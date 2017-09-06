@@ -1,0 +1,38 @@
+.btn {
+  display: inline-block;
+
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
+  color: @white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: @light-grey-blue;
+  outline: none;
+
+  transition: background-color 0.2s linear, color 0.2s linear;
+  &:hover,
+  &:focus {
+    background-color: #669ec0;
+  }
+  &:active {
+    color: fade(@white, 30%);
+
+    background-color: #5496bd;
+  }
+  &--disabled {
+    background-color: #e5e5e5;
+    &:hover,
+    &:focus {
+      background-color: #e5e5e5;
+    }
+    &:active {
+      color: @white;
+
+      background-color: #e5e5e5;
+    }
+  }
+}
