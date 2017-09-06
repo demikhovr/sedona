@@ -7,7 +7,6 @@
 
   list-style: none;
   text-align: left;
-  color: @black;
 
   background-color: @white-two;
 }
@@ -39,6 +38,7 @@
 
   font-size: 18px;
   line-height: 26px;
+  color: @black;
 }
 
 .features__item-descr {
@@ -46,6 +46,7 @@
 
   font-size: 14px;
   line-height: 21px;
+  color: @black-two;
 }
 
 @media @tablet-widths {
@@ -56,10 +57,42 @@
   }
 
   .features__item {
-    padding: 0;
-    padding-top: 150px;
+    flex-grow: 1;
+    flex-basis: 33%;
+    padding: 152px 40px 24px;
+    &--housing {
+      order: 1;
+      padding-right: 45px;
+      padding-left: 45px;
 
-    background-position: 50% 30%;
-    background-size: 77px 68px;
+      background-position: 50% 53px;
+      background-size: 75px 72px;
+    }
+    &--souvenirs {
+      order: 3;
+
+      background-position: 50% 50px;
+      background-size: 64px 75px;
+    }
+    &--food {
+      order: 2;
+      padding-right: 50px;
+      padding-left: 50px;
+
+      background-position: 50% 56px;
+      background-size: 77px 68px;
+    }
+  }
+
+  .features__item-title {
+    margin-bottom: 21px;
+
+    font-size: 21px;
+  }
+}
+
+@media @desktop-widths {
+  .features__item {
+    padding-bottom: 45px;
   }
 }
