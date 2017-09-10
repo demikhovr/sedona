@@ -1,0 +1,92 @@
+.field-checkbox__label {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  padding-left: 28%;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: @black;
+  text-transform: none;
+
+  cursor: pointer;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 25;
+
+    transition: opacity 0.1s linear, background-color 0.1s linear;
+  }
+  &::before {
+    top: 49.9%;
+    left: 0;
+
+    box-sizing: border-box;
+    width: 56px;
+    height: 56px;
+
+    background-color: @white-two;
+    border-radius: 5px;
+    transform: translateY(-50%);
+  }
+  &::after {
+    top: 50%;
+    left: 17px;
+
+    width: 22px;
+    height: 16px;
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  &:hover::before {
+    background-color: @grey;
+  }
+  &:active::before {
+    background-color: #d5d5d5;
+  }
+}
+
+.field-checkbox__input:focus + .field-checkbox__label::before {
+  background-color: @grey;
+}
+
+.field-checkbox__input:active + .field-checkbox__label::before {
+  background-color: #d5d5d5;
+}
+
+#sight-1:checked + .field-checkbox__label::after,
+#sight-2:checked + .field-checkbox__label::after,
+#sight-3:checked + .field-checkbox__label::after,
+#sight-4:checked + .field-checkbox__label::after,
+#sight-5:checked + .field-checkbox__label::after,
+#sight-6:checked + .field-checkbox__label::after {
+  opacity: 1;
+}
+#sight-1:checked + .field-checkbox__label:active::after,
+#sight-2:checked + .field-checkbox__label:active::after,
+#sight-3:checked + .field-checkbox__label:active::after,
+#sight-4:checked + .field-checkbox__label:active::after,
+#sight-5:checked + .field-checkbox__label:active::after,
+#sight-6:checked + .field-checkbox__label:active::after {
+  opacity: 0.3;
+}
+
+@media @tablet-widths {
+  .field-checkbox__label {
+    padding-left: 39.5%;
+  }
+}
+
+@media @desktop-widths {
+  .field-checkbox__label {
+    padding-left: 81px;
+  }
+}
