@@ -96,6 +96,7 @@ img {
   height: 26px;
   background-image: url("../img/bg-intro-triangle-mobile.svg");
   background-repeat: no-repeat;
+  background-size: 100% 26px;
 }
 .promo--inner {
   padding: 52px 0 67px;
@@ -125,6 +126,7 @@ img {
   height: 37px;
   background-image: url("../img/bg-triangle.svg");
   background-repeat: no-repeat;
+  background-size: 100% 37px;
 }
 .intro__title {
   width: 95%;
@@ -1233,6 +1235,7 @@ img {
   .promo::before {
     height: 57px;
     background-image: url("../img/bg-intro-triangle-tablet.svg");
+    background-size: 100% 57px;
   }
   .promo--inner {
     padding: 95px 0 117px;
@@ -1336,8 +1339,7 @@ img {
   .features__item {
     -ms-flex-positive: 1;
     flex-grow: 1;
-    -ms-flex-preferred-size: 33%;
-    flex-basis: 33%;
+    width: 33%;
     padding: 152px 40px 24px;
   }
   .features__item--housing {
